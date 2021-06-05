@@ -33,13 +33,13 @@ function draw(){
     shipImage.velocityY = -10;
   }
   
-  shipImage.velocityY = trex.velocityY + 0.5;
-  groundImage.velocityX = -10
-  if (groundImage.x < 0)
+  sea.velocityY = sea.velocityY + 0.5;
+  sea.velocityX = -10
+  if (sea.x < 0)
   {
-    groundImage.x = groundImage.width / 2
+    sea.x = sea.width / 2
   }
   //stop trex from falling down
-  trex.collide(groundImage);
+  shipImage.collide(sea);
   drawSprites();
 }
